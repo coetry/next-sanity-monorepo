@@ -1,0 +1,10 @@
+{
+  "builds": [
+    { "src": "next/package.json", "use": "@now/next " },
+    { "src": "sanity/package.json", "use": "@now/static-build" }
+  ],
+  "routes": [
+    { "src": "/sanity/(.*)", "dest": "sanity/$1" },
+    { "src": "/(.*)", "dest": "next/$1" }
+  ]
+}
